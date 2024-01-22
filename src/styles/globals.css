@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --text-color: #0c0209;
+  --bg-color: #f6f6f6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  color: var(--text-color);
+  background: var(--bg-color);
+}
+.MuiButton-containedPrimary {
+  @apply bg-primary-green;
+}
+.Mui-selected {
+  @apply text-primary-green !important;
+}
+
+.MuiTabs-indicator {
+  @apply bg-primary-green !important;
+}
+.MuiDataGrid-columnHeader:focus,
+.MuiDataGrid-cell:focus-within,
+.MuiDataGrid-cell:focus {
+  outline: none !important;
+}
+.warning-chip {
+  @apply bg-yellow-50 text-orange-600 text-center rounded-2xl;
+  padding: 4px 12px;
+}
+.error-chip {
+  @apply bg-red-100 text-red-600 text-center rounded-2xl;
+  padding: 4px 12px;
+}

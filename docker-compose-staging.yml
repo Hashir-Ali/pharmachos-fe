@@ -1,0 +1,10 @@
+version: '3.9'
+
+services:
+  nextjs:
+    image: ghcr.io/future-arc/pharmacyos-fe/master:latest
+    container_name: pharmacyos-fe
+    env_file:
+      - .env
+    ports:
+      - "5000:5000"
